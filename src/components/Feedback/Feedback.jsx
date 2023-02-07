@@ -44,6 +44,7 @@ export class Feedback extends Component {
     const totalFeedback = this.countTotalFeedback();
 
     return (
+      /*Голосування */
       <Card>
         <Title>Please leave feedback</Title>
         <Section>
@@ -57,6 +58,7 @@ export class Feedback extends Component {
             Bad <CgSmileSad />
           </Button>
         </Section>
+        {/* Результат */}
         <div>
           <h3>Statistics</h3>
           <p>Good: {good}</p>
