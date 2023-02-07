@@ -29,16 +29,6 @@ export class Feedback extends Component {
     return Number(result);
   }
 
-  /*
-  increaseVoteGood = () => {
-    this.setState(prevState => {
-      return {
-        good: prevState.good + 1,
-      };
-    });
-  };
-*/
-
   leaveVote(name) {
     this.setState(prevState => {
       return {
@@ -61,8 +51,7 @@ export class Feedback extends Component {
             Good <CgSmileMouthOpen />
           </Button>
           <Button onClick={() => this.leaveVote('neutral')}>
-            Neutral
-            <CgSmileNeutral />
+            Neutral <CgSmileNeutral />
           </Button>
           <Button onClick={() => this.leaveVote('bad')}>
             Bad <CgSmileSad />

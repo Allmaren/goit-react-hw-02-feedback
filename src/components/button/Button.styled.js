@@ -1,5 +1,19 @@
 import styled from 'styled-components';
 
+function getColor(propName) {
+  let color = '';
+  if (propName === 'good') {
+    color = '#19e512';
+  } else if (propName === 'neutral') {
+    color = '#78137f';
+  } else if (propName === 'bad') {
+    color = '#e51212';
+  } else {
+    color = '#122ee5';
+  }
+  return color;
+}
+
 export const Button = styled.button`
   display: inline-block;
   box-sizing: border-box;
@@ -14,7 +28,8 @@ export const Button = styled.button`
   transition: transform 250ms linear;
   &:hover {
     transform: scale(1.2);
-    background-color: darkslategray;
+    background-color: ${getColor()};
+
     color: #fff;
   }
 `;
