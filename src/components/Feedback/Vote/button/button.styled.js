@@ -14,7 +14,7 @@ function getColor(propName) {
   return color;
 }
 
-export const Button = styled.button`
+export const ButtonType = styled.button`
   display: inline-block;
   box-sizing: border-box;
   font-family: inherit;
@@ -29,7 +29,6 @@ export const Button = styled.button`
   &:hover {
     transform: scale(1.2);
     background-color: ${getColor()};
-
     color: #fff;
   }
 `;
