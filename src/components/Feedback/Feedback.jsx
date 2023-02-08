@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { Component } from 'react';
 import Vote from './Vote/Vote';
 import Results from './Results/Results';
