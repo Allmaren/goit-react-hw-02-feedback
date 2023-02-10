@@ -1,5 +1,5 @@
 import Button from './button/Button.jsx';
-import { Section } from 'components/Feedback/Vote/button/SectionButton.styled';
+import { Section } from 'components/Feedback/Vote/Vote.styled';
 import { CgSmileMouthOpen, CgSmileNeutral, CgSmileSad } from 'react-icons/cg';
 
 const Vote = ({ leaveVote }) => {

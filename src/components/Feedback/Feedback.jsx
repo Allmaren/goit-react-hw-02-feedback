@@ -2,6 +2,8 @@ import { Component } from 'react';
 import Vote from './Vote/Vote';
 import Results from './Results/Results';
 import VoteBlock from './Block/VoteBlock';
+import Notification from './Notification/Notification';
+import { Card } from './Block/Card.js';
 
 export class Feedback extends Component {
   state = {
@@ -40,11 +42,15 @@ export class Feedback extends Component {
     const totalFeedback = this.countTotalFeedback();
 
     return (
-      <div>
+      <Card>
         <VoteBlock title="Please leave feedback">
-          <Vote leaveVote={this.leaveVote} />
+          <Vote
+            leaveVote={this.leaveVote}
+            options={Object.keys({ good, neutral, bad })}
+          />
         </VoteBlock>
-        <VoteBlock title="Statistics">
+        <VoteBlock title="Statistics" />
+        {totalFeedback ? (
           <Results
             good={good}
             neutral={neutral}
@@ -52,8 +58,10 @@ export class Feedback extends Component {
             total={totalFeedback}
             positivePercentage={countPositiveFeedbackPercentage}
           />
-        </VoteBlock>
-      </div>
+        ) : (
+          <Notification tittle={'There is no feedback'} />
+        )}
+      </Card>
     );
   }
 }

@@ -1,12 +1,18 @@
-import styles from 'components/Feedback/Block/Card.module.scss';
+import PropTypes from 'prop-types';
+import { Title } from './Card.js';
 
 const VoteBlock = ({ children, title }) => {
   return (
-    <div className={styles.card}>
-      <h4 className={styles.title}>{title}</h4>
+    <>
+      <Title>{title}</Title>
       {children}
-    </div>
+    </>
   );
 };
 
 export default VoteBlock;
+
+VoteBlock.protoType = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node,
+};

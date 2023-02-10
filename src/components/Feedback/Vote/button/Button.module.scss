@@ -1,12 +1,3 @@
-.btn {
-  margin-left: auto;
-  margin-right: auto;
-
-  margin-top: 30px;
-  display: flex;
-  width: 300px;
-  justify-content: space-between;
-}
 .btnVote {
   border: none;
   border-radius: 8px;
@@ -18,10 +9,9 @@
   color: chocolate;
 
   transition: transform 250ms linear;
-}
-
-.btnVote:hover {
-  transform: scale(1.2);
-  background-color: coral;
-  color: darkslategray;
+  &:hover {
+    transform: scale(1.2);
+    background-color: coral;
+    color: darkslategray;
+  }
 }
