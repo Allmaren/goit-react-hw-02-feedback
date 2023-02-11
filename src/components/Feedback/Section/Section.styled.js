@@ -8,6 +8,7 @@ export const Card = styled.div`
   padding: 20px 40px;
   width: 600px;
   background-color: rgb(192, 181, 181);
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
 `;
 
 export const Title = styled.h4`
