@@ -12,7 +12,7 @@ export const Item = styled.li`
     margin-bottom: 5px;
   }
   color: ${({ item }) =>
-    (item === 'good' && '#19e512') ||
+    (item === 'good' && 'rgb(62 166 56)') ||
     (item === 'neutral' && '#78137f') ||
     (item === 'bad' && '#e51212')};
 `;

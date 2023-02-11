@@ -1,9 +1,11 @@
 import { Component } from 'react';
-import Vote from './Vote/Vote';
-import Results from './Results/Results';
-import VoteBlock from './Block/VoteBlock';
+
+import Statistic from './Statistic/Statistic';
+import Section from './Section/Section';
+import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Notification from './Notification/Notification';
-import { Card } from './Block/Card.js';
+
+import { Card } from './Section/Section.styled.js';
 
 export class Feedback extends Component {
   state = {
@@ -43,15 +45,15 @@ export class Feedback extends Component {
 
     return (
       <Card>
-        <VoteBlock title="Please leave feedback">
-          <Vote
+        <Section title="Please leave feedback">
+          <FeedbackOptions
             leaveVote={this.leaveVote}
-            options={Object.keys({ good, neutral, bad })}
+            options={Object.keys(this.state)}
           />
-        </VoteBlock>
-        <VoteBlock title="Statistics" />
+        </Section>
+        <Section title="Statistics" />
         {totalFeedback ? (
-          <Results
+          <Statistic
             good={good}
             neutral={neutral}
             bad={bad}
